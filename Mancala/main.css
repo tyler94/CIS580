@@ -122,19 +122,26 @@ body{
 .cup{
     border-radius: 50%;
     height: 90%;
+    cursor: pointer;
 }
 
 .p1-big-cup{
     border-radius: 30%;
     border: 3px solid salmon;
     height: 95%;
-    font-size: 200px;
 }
 
 .p2-big-cup{
     border-radius: 30%;
     border: 3px solid seagreen;
-    height: 98%;
+    height: 95%;
+}
+
+.p1bigText{
+    font-size: 200px;
+}
+
+.p2bigText{
     font-size: 200px;
 }
 
@@ -146,12 +153,12 @@ body{
 
 .p1slotText{
     color: salmon;
-    font-size: 170px;
+    font-size: 75px;
 }
 
 .p2slotText{
     color: seagreen;
-    font-size: 170px;
+    font-size: 75px;
 }
 
 .p1{
@@ -187,7 +194,19 @@ body{
     font-size: 300px;
 }
 
-.pebble{
+.p2-pebble{
     color: seagreen;
     font-size: 50px;
+    display: inline-block;
+}
+
+.p1-pebble{
+    color: salmon;
+    font-size: 50px;
+    display: inline-block;
+}
+
+.pebble-div{
+    max-width: 150px;
+    display: inline-block;
 }

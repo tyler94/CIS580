@@ -175,12 +175,31 @@ function checkBoard(){
 
 //update the view of the board
 function updateBoard(){
-    for(var i = 0; i < 6; i++){
+    for(var i = 0; i < 7; i++){
         document.getElementById('l'+ i.toString()).innerHTML = lslots[i];
         document.getElementById('r'+ i.toString()).innerHTML = rslots[i];
+        document.getElementById('l'+ i.toString() + '-pebbles').innerHTML = '';
+        document.getElementById('r'+ i.toString() + '-pebbles').innerHTML = '';
+
+        for(var j = 0; j < lslots[i]; j++){
+            var node = document.createElement("span");
+            var textnode = document.createTextNode(".");
+            node.appendChild(textnode);
+            node.classList.add('p2-pebble');
+            document.getElementById('l'+ i.toString() + '-pebbles').appendChild(node);
+        }
+
+        for(var j = 0; j < rslots[i]; j++){
+            var node = document.createElement("span");
+            var textnode = document.createTextNode(".");
+            node.appendChild(textnode);
+            node.classList.add('p1-pebble');
+            document.getElementById('r'+ i.toString() + '-pebbles').appendChild(node);
+        }
+
     }
-    document.getElementById('left-store').innerHTML = "<div class='p2-big-cup'>" + lslots[6] + "</div>";
-    document.getElementById('right-store').innerHTML =  "<div class='p1-big-cup'>" + rslots[6] + "</div>";
+    document.getElementById('l6').innerHTML = lslots[6];
+    document.getElementById('r6').innerHTML = rslots[6];
     document.getElementById('alert-messages').innerHTML = "It is " + currentTurn + "'s turn"
 }
 
